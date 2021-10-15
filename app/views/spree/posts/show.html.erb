@@ -37,7 +37,7 @@
       <% if SpreeBlogs::Config.use_raw_post_content && !SpreeBlogs::Config.use_action_text %>
         <%= raw @post.post_content %>
       <% else %>
-        <%= @post.post_content %>
+        <%= sanitize @post.post_content %>
       <% end %>
     </div>
   </div>
